@@ -1,0 +1,73 @@
+{
+  "ventana": 7,
+  "horizonte": 1,
+  "features": [
+    "RH_mean",
+    "Radiation_Wh_m2",
+    "Tmax",
+    "Tmin",
+    "Wind_speed",
+    "T_mean"
+  ],
+  "target": "ET0",
+  "proporciones_registros": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "periodos_registros": {
+    "train": [
+      "2005-02-02",
+      "2019-03-02"
+    ],
+    "val": [
+      "2019-03-03",
+      "2021-04-28"
+    ],
+    "test": [
+      "2021-04-29",
+      "2022-10-31"
+    ]
+  },
+  "muestras": {
+    "train": 1192,
+    "val": 396,
+    "test": 390
+  },
+  "formas": {
+    "X_train": [
+      1192,
+      7,
+      6
+    ],
+    "y_train": [
+      1192,
+      1
+    ],
+    "X_val": [
+      396,
+      7,
+      6
+    ],
+    "y_val": [
+      396,
+      1
+    ],
+    "X_test": [
+      390,
+      7,
+      6
+    ],
+    "y_test": [
+      390,
+      1
+    ]
+  },
+  "escalado": "MinMaxScaler(0,1) ajustado solo con train; scaler_X para features, scaler_y para ET0",
+  "dataset_origen": "./Datasets/Tibaitata_ET0_FAO56.pkl",
+  "versiones": {
+    "sklearn": "1.9.1",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  }
+}
